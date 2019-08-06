@@ -3,7 +3,7 @@
         this.text = note
     };
 
-    Notes.prototype.all = function() {
+    Notes.prototype.read = function() {
         return this.text
     };
 
