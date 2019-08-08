@@ -22,6 +22,21 @@
             } else {
                 throw new Error('Assertion Failed: ' + assertionOfSorts + " have not been transformed into HTML");
             }
+        },
+        controllerExists: function(controller) {
+            if(controller instanceof NoteController) {
+                console.log("Test: 'controllerExists' has passed");
+            } else {
+                throw new Error('Assertion Failed: ' + controller + " is not an instance of NoteController");
+
+            }
+        },
+        htmlIsEq: function(noteHtml, testHtml) {
+            if(noteHtml === testHtml) {
+                console.log("Test: 'htmlIsEq' has passed!");
+            } else {
+                throw new Error('Assertion Failed: ' + noteHtml + " does not match the test html");
+            }
         }
     };
     

@@ -1,7 +1,3 @@
-// import { assert } from "./assert";
-
-// import { instantiate } from "./instantiate";
-
 (function() {
   var notes = new Notes("First note!");
   var noteList = new NoteList();
@@ -32,7 +28,19 @@
     assert.toReturnInHtml(listView.getHTML(noteList.all()));
   }
 
+  function testNoteController() {
+    var nList = new NoteList();
+    // var html = document.getElementById('test').innerHTML;
+    var controller = new NoteController(nList);
+    controller.getNotes = function() {
+      return document.getElementById('app').innerHTML;
+    }
+    assert.controllerExists(controller);
+    assert.htmlIsEq(controller.getNotes(), document.getElementById('app').innerHTML);
+  }
+
   testNoteDefaults();
   testNoteListHoldsNotes();
   testNoteListView();
+  testNoteController();
 })(this);
