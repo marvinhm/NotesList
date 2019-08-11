@@ -1,0 +1,20 @@
+.title {
+  margin: auto;
+  width: 50%;
+  border: 3px solid green;
+  padding: 10px;
+}
+
+.note-view {
+  margin: auto; 
+  margin-top: 20px;
+  width: 80%;
+  padding: 70px 0;
+  border: 3px solid green;
+  text-align: center;
+}
+
+
+.textline {
+  text-align: center;
+}
